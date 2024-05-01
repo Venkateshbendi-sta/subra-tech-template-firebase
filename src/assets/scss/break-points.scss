@@ -1,0 +1,61 @@
+
+/* Define reusable media query breakpoints */
+$extra-small: 576px;   /* Extra small devices (phones) */
+$small: 768px;         /* Small devices (tablets) */
+$medium: 992px;        /* Medium devices (laptops) */
+$large: 1200px;        /* Large devices (desktops) */
+
+/* Define reusable media query mixins */
+@mixin media-extra-small {
+  @media (max-width: #{$extra-small - 1px}) {
+    @content;
+  }
+}
+
+@mixin media-small {
+  @media (min-width: #{$extra-small}) and (max-width: #{$small - 1px}) {
+    @content;
+  }
+}
+
+@mixin media-medium {
+  @media (min-width: #{$small}) and (max-width: #{$medium - 1px}) {
+    @content;
+  }
+}
+
+
+
+@mixin media-large {
+  @media (min-width: #{$medium}) and (max-width: #{$large - 1px}) {
+    @content;
+  }
+}
+
+@mixin from-medium-to-extra-large{
+  @media (min-width: #{$medium}){
+    @content;
+  }
+}
+@mixin media-extra-large {
+  @media (min-width: #{$large}) {
+    @content;
+  }
+}
+
+
+@mixin till-small{
+  @media (max-width: #{$medium}) {
+    @content;
+  }
+}
+@mixin till-medium{
+  @media (max-width: #{$large}) {
+    @content;
+  }
+}
+@mixin from-meduim{
+  @media (min-width: #{$medium+1}) {
+    @content;
+  }
+}

@@ -1,0 +1,6 @@
+@import '../sc-shared-style-imports.scss';
+.baner-contaner{
+    background-color: map-get($st-primary-palette, 500);
+    color: map-get($map:$st-primary-palette , $key: A100);
+    padding: $p1;
+}

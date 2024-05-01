@@ -1,0 +1,17 @@
+@import url(./_variables.scss);
+@mixin align-center{
+    text-align: center;
+}
+@mixin sc-flex-mixin($jc:center, $fd:row, $ai:center,$gap:$g2){
+    display: flex;
+    justify-content: $jc;
+    align-items: $ai;
+    gap:$gap;
+    flex-direction: $fd;
+}
+
+@mixin sc-gird-equal-height-coulmns($coulmn:2, $size:1fr){
+    display: grid;
+    grid-template-columns: repeat($coulmn, $size);
+    gap: 20px;
+}

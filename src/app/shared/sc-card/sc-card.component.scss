@@ -1,0 +1,7 @@
+@import '../sc-shared-style-imports.scss';
+.card-container{
+    border: 1px solid map-get($map: $sc-accent-palette, $key:50 );
+    padding: $p1;
+    border-radius: $br1;
+    box-sizing: content-box;
+}

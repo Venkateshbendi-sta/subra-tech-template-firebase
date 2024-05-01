@@ -1,0 +1,20 @@
+<div style="height: 100vh">
+  <mat-drawer-container class="sc-drawer-container" style="height: 100%;">
+    <mat-drawer mode="over" opened="true"  #drawer class="sc-drawer">
+      <div class="brand-container">
+        <img [src]="logo" *ngIf="showBrand"/>
+      </div>
+      <div *ngFor="let sideMenu of sideMenuItems.top" class="sc-nav-item-container" [ngClass]="{'active-menu-item':activeMenuItem === sideMenu?.main?.id}">
+        <div   (click)="menuItemClick(sideMenu)" class="sc-nav-item">
+          <i [ngClass]="sideMenu?.main?.icon" class="primary menu-icon" ></i>
+          <span>{{ sideMenu?.main?.label }}</span>
+        </div>
+      </div>
+    </mat-drawer>
+    <mat-drawer-content>
+      <div>
+        <ng-content></ng-content>
+      </div>
+    </mat-drawer-content>
+  </mat-drawer-container>
+</div>

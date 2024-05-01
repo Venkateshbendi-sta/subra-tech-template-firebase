@@ -1,0 +1,20 @@
+@import "../../../assets/scss/sc-style-imports.scss";
+.home-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.live-course-container, .recorded-course-container,.view-all-courses-line{
+  padding: $p1;
+}
+.mat-chip{
+  background-color: $white;
+}
+.course-items-container{
+  margin-top: $p2
+}
+@include from-meduim{
+  .course-items-container{
+    @include sc-gird-equal-height-coulmns(3);
+  }
+}

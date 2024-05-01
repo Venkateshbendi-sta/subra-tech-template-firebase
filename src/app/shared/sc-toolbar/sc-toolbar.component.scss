@@ -1,0 +1,44 @@
+@import '../sc-shared-style-imports.scss';
+.example-spacer {
+    flex: 1 1 auto;
+  }
+  .logo{
+    background-color: $white;
+    display: flex;
+    padding: $p3;
+    border-radius: $br3;
+    font-size: 18px;
+    font-weight: 200;
+  }
+  .vertical-seprator{
+    background-color: $white;
+    padding: 1px;
+    min-height: 20px;
+  }
+  
+  @include  till-small{
+    .main-large-toolbar{
+      display: none;
+    }
+  }
+  @include from-meduim{
+    .main-small-toolbar{
+      display: none;
+    }
+    .info-services{
+      display: none;
+    }
+  }
+  .info-services{
+    margin-top: $m1;
+    margin-bottom: $m1;
+  }
+  .info-services-map-set{
+    mat-chip{
+      border: 1px solid map-get($sc-accent-palette, 300 );
+    }
+  }
+
+ .main-content{
+  margin-top: $p1;
+ }

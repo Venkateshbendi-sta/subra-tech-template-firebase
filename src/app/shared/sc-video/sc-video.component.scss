@@ -1,0 +1,44 @@
+@import '../sc-shared-style-imports.scss';
+.video-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+  
+  overflow: hidden; 
+}
+
+.custom-video {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.custom-controls {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.custom-controls button {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.custom-controls button:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.hidden {
+  display: none;
+}
+.show-controls, .hide-controls{
+  background-color: transparent !important;
+  color: map-get($map: $st-primary-palette, $key: 500 );
+}

@@ -1,0 +1,20 @@
+@use '@angular/material' as mat;
+
+@import '../scss/variables';
+
+
+/* You can add global styles to this file, and also import other style files */
+$custom-primary:mat.define-palette($st-primary-palette);
+$custom-accent:mat.define-palette($sc-accent-palette);
+$custom-warn:mat.define-palette(mat.$red-palette);
+
+$custom-theme: mat.define-light-theme((
+    color:(
+        primary:$custom-primary,
+        accent:$custom-accent,
+        warn:$custom-warn
+    )
+));
+
+@include mat.all-component-themes($custom-theme);
+

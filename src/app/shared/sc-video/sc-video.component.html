@@ -1,0 +1,26 @@
+<div class="video-container" (mouseenter)="showControls()" (mouseleave)="hideControls()">
+  <video
+    #videoPlayer
+    class="custom-video"
+    [controls]="controls"
+    [autoplay]="autoplay"
+    [muted]="muted"
+    [poster]="posterUrl"
+  >
+    <source [src]="url" type="video/mp4" />
+    Your browser does not support video play
+  </video>
+  
+  <div class="custom-controls sc-f-vc"  [ngClass]="{'hidden': !showControlsFlag}">
+    <button 
+     class="play" (click)="palayOrPauseVieo()"
+    >
+     <i class="fa-solid fa-play primary" *ngIf="!isPlay"></i> 
+     <i class="fa-solid fa-pause primary" *ngIf="isPlay"></i>
+    </button>
+    <button mat-button class="show-controls" (click)="toggleControls(true)" *ngIf="!controls">Show controls</button>
+    <button mat-button class="hide-controls" (click)="toggleControls(false)" *ngIf="controls">Hide controls</button>
+  </div>
+</div>
+
+

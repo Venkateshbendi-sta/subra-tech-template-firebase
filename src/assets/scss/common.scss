@@ -1,0 +1,52 @@
+@import './variables';
+@import './mixins.scss';
+@import './theme.scss';
+
+.sc-f-hc{
+    @include sc-flex-mixin();
+}
+.sc-f-vc{
+    @include sc-flex-mixin(null,column);
+}
+.sc-f-vstart{
+    @include sc-flex-mixin(null,column, start);
+}
+.sc-f-hsb{
+    @include sc-flex-mixin(space-between);
+}
+
+.primary{
+ color: map-get($st-primary-palette, 500);
+
+}
+.accent{
+ color: map-get($sc-accent-palette, 500);
+
+}
+.sc-gird-cl-2{
+    @include sc-gird-equal-height-coulmns;
+}
+.sc-gird-cl-1{
+    @include sc-gird-equal-height-coulmns(1);
+}
+.sc-gird-cl-3{
+    @include sc-gird-equal-height-coulmns(3);
+}
+.sc-h1{
+    font-size: $fXl;
+}
+.sc-h2{
+    font-size: $fl;
+}
+.sc-h3{
+    font-size: $fm;
+}
+.sc-h4{
+    font-size: $f1;
+}
+.sc-cursor-pointer{
+    cursor: pointer;
+}
+.sc-block-btn{
+    width: 100%;
+}

@@ -1,0 +1,14 @@
+<div>
+    <button (click)="addItem()">Add</button>
+   
+</div>
+
+<div *ngFor="let data of allData" class="sc-f-hc container">
+    <div><h1>{{data.title}}</h1></div>
+    <div>
+        <button (click)="deleteItem(data.id)">delete</button>
+        <button (click)="updateItem(data.id)">update</button>
+        <button (click)="updateItem(data.id)">delete</button>
+    </div>
+  
+</div>

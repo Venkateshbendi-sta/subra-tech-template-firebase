@@ -1,0 +1,51 @@
+<div class="tool-bar-container">
+  <mat-toolbar class="main-large-toolbar">
+    <mat-toolbar-row>
+      <span class="logo" *ngIf="isShowLogo"><img [src]="logo" /></span>
+      <div *ngFor="let item of menuItemsDesktop?.left">
+        <ng-container *ngTemplateOutlet="buttonTemplate; context: { $implicit: item }"></ng-container>
+        <!-- <div class="vertical-seprator"></div> -->
+      </div>
+      <span class="example-spacer"></span>
+      <div *ngFor="let item of menuItemsDesktop?.right">
+        <ng-container *ngTemplateOutlet="buttonTemplate; context: { $implicit: item }"></ng-container>
+        
+        <!-- <div class="vertical-seprator"></div> -->
+      </div>
+      
+    </mat-toolbar-row>
+  </mat-toolbar>
+
+
+
+  <mat-toolbar class="main-small-toolbar">
+    <mat-toolbar-row>
+      <div *ngFor="let item of menuItemsMobile?.bar?.left">
+        <ng-container *ngTemplateOutlet="buttonTemplate; context: { $implicit: item }"></ng-container>
+
+      </div>
+     
+      <span class="example-spacer"></span>
+      <div *ngFor="let item of menuItemsMobile?.bar?.right">
+        <ng-container *ngTemplateOutlet="buttonTemplate; context: { $implicit: item }"></ng-container>
+        
+      </div>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</div>
+
+<div class="info-services sc-f-hc">
+  <mat-chip-set class="info-services-map-set">
+    <mat-chip color="primary" *ngFor="let item of menuItemsMobile?.chips">
+      <i [ngClass]="item?.icon"></i> {{item.label}}
+    </mat-chip>
+  </mat-chip-set>
+</div>
+
+
+<ng-template #buttonTemplate let-item>
+  <button mat-button color="accent" (click)="toolbarMenuItemClick(item)">
+    <i [ngClass]="item?.icon" class="primary" *ngIf="item?.icon"></i>
+    {{ item?.label }}
+  </button>
+</ng-template>

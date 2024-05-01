@@ -1,0 +1,42 @@
+@import '../sc-shared-style-imports.scss';
+.c-drawer-container {
+    width: 100% !important;
+}
+.sc-drawer{
+    width: 70% !important;
+    padding: $p4;
+
+}
+@include from-meduim{
+    .sc-drawer{
+        width: 30% !important;
+    }
+}
+
+.sc-nav-item{
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding-top: $p2;
+    padding-bottom: $p2;
+    gap: $g1;
+}
+// .menu-icon{
+//     margin-right: $m3;
+// }
+.brand-container{
+    padding-bottom: $p3;
+    padding-top: $p3;
+}
+.active-menu-item{
+    background-color: map-get($map: $st-primary-palette, $key: 100);
+    // padding-left: $p3;
+    // padding-right: $p3;
+    border-radius: $br4;
+}
+
+.sc-nav-item-container,.brand-container{
+    padding-left: $p1;
+
+}
